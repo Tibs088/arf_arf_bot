@@ -1,6 +1,7 @@
 const Discord = require('discord.js');
 const config = require("./config.json");
 const ytdl = require('ytdl-core')
+const
 
 const client = new Discord.Client();
 
@@ -48,7 +49,7 @@ client.on('message', (message) => {
     //arfArf();
     isReady;
   }
-  if (command === 'omg' && isReady) {
+  if (command == 'omg' && isReady) {
     !isReady;
     const timeTaken = Date.now() - message.createdTimestamp;
     message.reply(`Oh my god, who the hell cares     Time Taken:${timeTaken}ms`);
@@ -56,7 +57,7 @@ client.on('message', (message) => {
     voiceChannel.join().then(connection => {
       const dispatcher = connection.play(ytdl('https://www.youtube.com/watch?v=RAA1xgTTw9w'));
       dispatcher.on('end', end => {
-        voiceChannel.leave();
+        voiceChannel.leave()
       })
     }).catch((err) => {
       console.log(err);
