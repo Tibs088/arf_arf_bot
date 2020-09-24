@@ -18,6 +18,11 @@
   },
   "homepage": "https://github.com/Tibs088/arf_arf_bot#readme",
   "dependencies": {
-    "discord.js": "^12.3.1"
+    "@discordjs/opus": "^0.3.2",
+    "discord.js": "^12.3.1",
+    "ffmpeg": "0.0.4",
+    "ffmpeg-static": "^4.2.7",
+    "fluent-ffmpeg": "^2.1.2",
+    "ytdl-core": "^3.2.2"
   }
 }
