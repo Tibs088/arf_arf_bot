@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const config = require("./config.json");
-const ytdl = require('ytdl-core')
-const
+const ytdl = require('ytdl-core');
+const { arfArf, omg, avengers } = require('./Audio Funcs/audio');
 
 const client = new Discord.Client();
 
@@ -19,10 +19,6 @@ client.once('disconnect', () => {
   console.log('Disconnect!');
 });
 
-function arfArf(guild) {
-
-}
-
 client.on('message', (message) => {
   if (message.author.bot) return;
   if (!message.content.startsWith(prefix)) return;
@@ -33,37 +29,12 @@ client.on('message', (message) => {
   const command = args.shift().toLowerCase();
 
   if (command === 'arf' && isReady) {
-    !isReady;
-    const timeTaken = Date.now() - message.createdTimestamp;
-    message.reply(`Arf Arf!     Time Taken:${timeTaken}ms`);
-    let voiceChannel = message.member.voice.channel;
-    voiceChannel.join().then(connection => {
-      const dispatcher = connection.play(ytdl('https://www.youtube.com/watch?v=DTMvh4hFeA4'));
-      dispatcher.on('end', end => {
-        voiceChannel.leave();
-      })
-    }).catch((err) => {
-      console.log(err);
-    })
-
-    //arfArf();
-    isReady;
+    arfArf(isReady, message);
+  }
+  if (command === 'assemble' && isReady) {
+    avengers(isReady, message);
   }
   if (command == 'omg' && isReady) {
-    !isReady;
-    const timeTaken = Date.now() - message.createdTimestamp;
-    message.reply(`Oh my god, who the hell cares     Time Taken:${timeTaken}ms`);
-    let voiceChannel = message.member.voice.channel;
-    voiceChannel.join().then(connection => {
-      const dispatcher = connection.play(ytdl('https://www.youtube.com/watch?v=RAA1xgTTw9w'));
-      dispatcher.on('end', end => {
-        voiceChannel.leave()
-      })
-    }).catch((err) => {
-      console.log(err);
-    })
-
-    //arfArf();
-    isReady;
+    omg(isReady, message);
   }
 })
