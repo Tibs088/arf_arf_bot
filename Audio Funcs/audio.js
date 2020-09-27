@@ -1,4 +1,4 @@
-//const Discord = require('discord.js');
+const { MessageAttachment } = require('discord.js');
 const ytdl = require('ytdl-core');
 
 exports.arfArf = (isReady, message) => {
@@ -19,8 +19,8 @@ exports.arfArf = (isReady, message) => {
 
 exports.omg = (isReady, message) => {
   !isReady;
-  const timeTaken = Date.now() - message.createdTimestamp;
-  message.reply(`Oh my god, who the hell cares     Time Taken:${timeTaken}ms`);
+  const attachment = new MessageAttachment('https://media.giphy.com/media/QgejSvXmwpvnW/giphy.gif');
+  message.reply(`Oh my god, who the hell cares`, attachment);
   let voiceChannel = message.member.voice.channel;
   voiceChannel.join().then(connection => {
     const dispatcher = connection.play(ytdl('https://www.youtube.com/watch?v=RAA1xgTTw9w'));
@@ -45,6 +45,22 @@ exports.avengers = (isReady, message) => {
     })
   }).catch((err) => {
     console.log(err);
+  })
+  isReady;
+}
+
+exports.onlyGame = (isReady, message) => {
+  !isReady;
+  const attachment = new MessageAttachment('https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/f3/f31aeda808207d3277b17f3ed572aa7f89981488_full.jpg');
+  message.reply(`Is only game`, attachment);
+  let voiceChannel = message.member.voice.channel;
+  voiceChannel.join().then(connection => {
+    const dispatcher = connection.play(ytdl('https://www.youtube.com/watch?v=xzpndHtdl9A'));
+    dispatcher.on('end', end => {
+      voiceChannel.leave();
+    })
+  }).catch((err) => {
+    console.log(err)
   })
   isReady;
 }

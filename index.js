@@ -1,13 +1,13 @@
-const Discord = require('discord.js');
+const { Client, MessageAttachment } = require('discord.js');
 const config = require("./config.json");
-const ytdl = require('ytdl-core');
-const { arfArf, omg, avengers } = require('./Audio Funcs/audio');
+const { arfArf, omg, avengers, onlyGame } = require('./Audio Funcs/audio');
+const { quickMaths, sendImg } = require('./Other Funcs/randomfuncs')
 
-const client = new Discord.Client();
+const client = new Client();
 
 client.login(config.BOT_TOKEN);
 
-const prefix = '€'
+const prefix = '*';
 
 client.once('ready', () => {
   console.log('Ready!');
@@ -36,5 +36,8 @@ client.on('message', (message) => {
   }
   if (command == 'omg' && isReady) {
     omg(isReady, message);
+  }
+  if (command == 'onlygame' && isReady) {
+    onlyGame(isReady, message);
   }
 })

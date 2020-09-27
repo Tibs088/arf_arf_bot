@@ -23,6 +23,7 @@
     "ffmpeg": "0.0.4",
     "ffmpeg-static": "^4.2.7",
     "fluent-ffmpeg": "^2.1.2",
+    "giphy-api": "^2.0.1",
     "ytdl-core": "^3.2.2"
   }
 }
