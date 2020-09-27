@@ -1,6 +1,6 @@
 const { Client, MessageAttachment } = require('discord.js');
 const config = require("./config.json");
-const { arfArf, omg, avengers, onlyGame, soundEffect } = require('./Audio Funcs/audio');
+const { soundEffect } = require('./Audio Funcs/audio');
 const { quickMaths, sendImg } = require('./Other Funcs/randomfuncs')
 
 const client = new Client();
@@ -51,5 +51,22 @@ client.on('message', (message) => {
     const text = ':('
     const img = 'https://media.giphy.com/media/xT5LMFfQQJtiKQ2gCs/giphy.gif'
     soundEffect(isReady, message, link, text, img)
+  }
+  if (command == 'denys' && isReady) {
+    const link = 'https://www.youtube.com/watch?v=PE0InPLkNMU'
+    const text = 'The fuck is up Dennys!'
+    const img = "https://media1.tenor.com/images/8c8bf3cedc28bd6a2fed6a14007a2e28/tenor.gif?itemid=15967110"
+    soundEffect(isReady, message, link, text, img)
+  }
+  if (command === 'sure' && isReady) {
+    const link = 'https://www.youtube.com/watch?v=pHF-4BVkxCQ'
+    const text = 'Are you sure about that?'
+    const img = 'https://media.tenor.com/images/cef1a8744cacba2677a74706175690b1/tenor.gif'
+    soundEffect(isReady, message, link, text, img)
+  }
+  if (command === 'quickmaths' && isReady) {
+    const numArgs = args.map(x => parseFloat(x));
+    const sum = numArgs.reduce((counter, x) => counter += x);
+    message.reply(`2 + 2 is 4...  ${sum}!`);
   }
 })
