@@ -1,7 +1,7 @@
 {
   "name": "arf_arf_bot",
   "version": "1.0.0",
-  "description": "",
+  "description": "Arf Arf is a bot is a meme bot I am developing to do various jokes within mine and my friends discord server.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

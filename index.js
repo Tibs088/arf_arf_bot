@@ -64,6 +64,24 @@ client.on('message', (message) => {
     const img = 'https://media.tenor.com/images/cef1a8744cacba2677a74706175690b1/tenor.gif'
     soundEffect(isReady, message, link, text, img)
   }
+  if (command === "doot" && isReady) {
+    const link = 'https://www.youtube.com/watch?v=WTWyosdkx44'
+    const text = 'doot'
+    const img = 'https://media.tenor.com/images/35eaa865673fb96ad93ead542958ec84/tenor.gif'
+    soundEffect(isReady, message, link, text, img)
+  }
+  // if (command === "bwekfast" && isReady) {
+  //   const link = 'https://www.youtube.com/watch?v=9wHxGNn6KxY'
+  //   const text = 'bwekfast'
+  //   const img = 'https://media.tenor.com/images/35eaa865673fb96ad93ead542958ec84/tenor.gif'
+  //   soundEffect(isReady, message, link, text, img)
+  // }
+  if (command === "thicc" && isReady) {
+    const link = 'https://www.youtube.com/watch?v=ozaK4NIl_GY'
+    const text = 'that a thicc ass boy'
+    const img = 'https://media.tenor.com/images/1d8b56603fb7d67d59819f5f291cf7eb/tenor.gif'
+    soundEffect(isReady, message, link, text, img)
+  }
   if (command === 'quickmaths' && isReady) {
     const numArgs = args.map(x => parseFloat(x));
     const sum = numArgs.reduce((counter, x) => counter += x);
