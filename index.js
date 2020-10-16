@@ -1,7 +1,7 @@
 const { Client, MessageAttachment } = require('discord.js');
 const config = require("./config.json");
 const { soundEffect } = require('./Audio Funcs/audio');
-const { quickMaths, sendImg } = require('./Other Funcs/randomfuncs')
+const { sendImg } = require('./Other Funcs/randomfuncs')
 
 const client = new Client();
 
@@ -80,6 +80,12 @@ client.on('message', (message) => {
     const link = 'https://www.youtube.com/watch?v=ozaK4NIl_GY'
     const text = 'that a thicc ass boy'
     const img = 'https://media.tenor.com/images/1d8b56603fb7d67d59819f5f291cf7eb/tenor.gif'
+    soundEffect(isReady, message, link, text, img)
+  }
+  if (command === "fuckedup" && isReady) {
+    const link = 'https://www.youtube.com/watch?v=CuycuV0E4KU'
+    const text = 'On todays episode'
+    const img = 'https://www.miamilakesautomall.com/chrysler-blog/wp-content/uploads/sites/83/2017/03/car-sinking-what-to-do-miami-lakes-chrysler.jpg'
     soundEffect(isReady, message, link, text, img)
   }
   if (command === 'quickmaths' && isReady) {
